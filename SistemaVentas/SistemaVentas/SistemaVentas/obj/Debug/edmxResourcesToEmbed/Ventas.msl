@@ -26,7 +26,7 @@
     <EntitySetMapping Name="DetalleVenta">
       <EntityTypeMapping TypeName="VentasModel.DetalleVenta">
         <MappingFragment StoreEntitySet="DetalleVenta">
-          <ScalarProperty Name="IdDetalleventa" ColumnName="IdDetalleventa" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
           <ScalarProperty Name="IdVenta" ColumnName="IdVenta" />
           <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
           <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
@@ -87,13 +87,7 @@
       <EntityTypeMapping TypeName="VentasModel.Venta">
         <MappingFragment StoreEntitySet="Venta">
           <ScalarProperty Name="IdVenta" ColumnName="IdVenta" />
-          <ScalarProperty Name="Serie" ColumnName="Serie" />
-          <ScalarProperty Name="Numero" ColumnName="Numero" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-          <ScalarProperty Name="TotalVenta" ColumnName="TotalVenta" />
-          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
-          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
-          <ScalarProperty Name="Igv" ColumnName="Igv" />
           <ScalarProperty Name="TotalPagar" ColumnName="TotalPagar" />
           <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
           <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />

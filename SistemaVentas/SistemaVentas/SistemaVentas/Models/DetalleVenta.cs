@@ -18,7 +18,7 @@ namespace SistemaVentas.Models
         public int IdProducto { get; set; }
         public int Cantidad { get; set; }
         public decimal Precio { get; set; }
-        public string IdDetalleventa { get; set; }
+        public Nullable<decimal> Total { get; set; }
     
         public virtual Venta Venta { get; set; }
         public virtual Producto Producto { get; set; }

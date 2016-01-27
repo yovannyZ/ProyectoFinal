@@ -24,7 +24,8 @@
   </EntityType>
   <EntityType Name="DetalleVenta">
     <Key>
-      <PropertyRef Name="IdDetalleventa" />
+      <PropertyRef Name="IdVenta" />
+      <PropertyRef Name="IdProducto" />
     </Key>
     <Property Name="IdVenta" Type="Int32" Nullable="false" />
     <Property Name="IdProducto" Type="Int32" Nullable="false" />
@@ -32,7 +33,7 @@
     <Property Name="Precio" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
     <NavigationProperty Name="Venta" Relationship="Self.fk_Venta_Detalle" FromRole="DetalleVenta" ToRole="Venta" />
     <NavigationProperty Name="Producto" Relationship="Self.fk_Venta_Produc" FromRole="DetalleVenta" ToRole="Producto" />
-    <Property Name="IdDetalleventa" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Total" Type="Decimal" Precision="19" Scale="2" />
   </EntityType>
   <EntityType Name="Empleado">
     <Key>
@@ -90,13 +91,7 @@
       <PropertyRef Name="IdVenta" />
     </Key>
     <Property Name="IdVenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Serie" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Numero" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="TotalVenta" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
-    <Property Name="Descuento" Type="Decimal" Precision="8" Scale="2" />
-    <Property Name="Subtotal" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
-    <Property Name="Igv" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
     <Property Name="TotalPagar" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
     <Property Name="IdCliente" Type="Int32" Nullable="false" />
     <Property Name="IdEmpleado" Type="Int32" Nullable="false" />

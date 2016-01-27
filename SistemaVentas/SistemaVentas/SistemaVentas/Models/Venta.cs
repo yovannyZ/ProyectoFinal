@@ -20,13 +20,7 @@ namespace SistemaVentas.Models
         }
     
         public int IdVenta { get; set; }
-        public string Serie { get; set; }
-        public string Numero { get; set; }
         public System.DateTime Fecha { get; set; }
-        public decimal TotalVenta { get; set; }
-        public Nullable<decimal> Descuento { get; set; }
-        public decimal Subtotal { get; set; }
-        public decimal Igv { get; set; }
         public decimal TotalPagar { get; set; }
         public int IdCliente { get; set; }
         public int IdEmpleado { get; set; }

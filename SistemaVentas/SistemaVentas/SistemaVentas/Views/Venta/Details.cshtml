@@ -1,0 +1,85 @@
+﻿@model SistemaVentas.Models.Venta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Venta</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPagar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPagar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleado.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empleado.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoComprobante.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoComprobante.Descripcion)
+        </dd>
+
+    </dl>
+</div>
+<table class="table table-hover">
+    <thead class="thead-inverse">
+        <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.DetalleVenta != null && Model.DetalleVenta.Count > 0)
+        {
+            var i = 0;
+            foreach (var item in Model.DetalleVenta)
+            {
+                <tr>
+                    <td>@item.Producto.Nombre</td>
+                    <td>@item.Precio</td>
+                    <td>@item.Cantidad</td>
+                    <td>@item.Total</td>
+                </tr>
+                i++;
+            }
+        }
+    </tbody>
+</table>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdVenta }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -22,13 +22,14 @@
   </EntityType>
   <EntityType Name="DetalleVenta">
     <Key>
-      <PropertyRef Name="IdDetalleventa" />
+      <PropertyRef Name="IdVenta" />
+      <PropertyRef Name="IdProducto" />
     </Key>
-    <Property Name="IdDetalleventa" Type="nchar" MaxLength="10" Nullable="false" />
     <Property Name="IdVenta" Type="int" Nullable="false" />
     <Property Name="IdProducto" Type="int" Nullable="false" />
     <Property Name="Cantidad" Type="int" Nullable="false" />
     <Property Name="Precio" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Total" Type="decimal" Precision="19" Scale="2" StoreGeneratedPattern="Computed" />
   </EntityType>
   <EntityType Name="Empleado">
     <Key>
@@ -80,13 +81,7 @@
       <PropertyRef Name="IdVenta" />
     </Key>
     <Property Name="IdVenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Serie" Type="varchar" MaxLength="5" Nullable="false" />
-    <Property Name="Numero" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="Fecha" Type="date" Nullable="false" />
-    <Property Name="TotalVenta" Type="decimal" Precision="8" Scale="2" Nullable="false" />
-    <Property Name="Descuento" Type="decimal" Precision="8" Scale="2" />
-    <Property Name="Subtotal" Type="decimal" Precision="8" Scale="2" Nullable="false" />
-    <Property Name="Igv" Type="decimal" Precision="8" Scale="2" Nullable="false" />
     <Property Name="TotalPagar" Type="decimal" Precision="8" Scale="2" Nullable="false" />
     <Property Name="IdCliente" Type="int" Nullable="false" />
     <Property Name="IdEmpleado" Type="int" Nullable="false" />
