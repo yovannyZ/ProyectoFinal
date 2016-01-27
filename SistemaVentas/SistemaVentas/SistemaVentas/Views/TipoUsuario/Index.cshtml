@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Gestion de Tipos de Usuarios</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear nuevo tipo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -23,9 +23,9 @@
             @Html.DisplayFor(modelItem => item.Descripcion)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { Id=item.IdTipoUsuario }) |
-            @Html.ActionLink("Details", "Details", new { Id=item.IdTipoUsuario }) |
-            @Html.ActionLink("Delete", "Delete", new { Id=item.IdTipoUsuario })
+            @Html.ActionLink("Editar", "Edit", new { Id=item.IdTipoUsuario }) |
+            @Html.ActionLink("Ver Detalle", "Details", new { Id=item.IdTipoUsuario }) |
+            @Html.ActionLink("Eliminar", "Delete", new { Id=item.IdTipoUsuario })
         </td>
     </tr>
 }

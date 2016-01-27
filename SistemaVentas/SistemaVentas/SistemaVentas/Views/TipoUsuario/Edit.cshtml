@@ -4,9 +4,9 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Editar</h2>
 
-
+<hr />
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -32,9 +32,9 @@
         </div>
     </div>
 }
-
+<hr />
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Regresar", "Index")
 </div>
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>

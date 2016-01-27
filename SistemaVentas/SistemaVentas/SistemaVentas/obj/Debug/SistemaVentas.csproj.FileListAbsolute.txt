@@ -80,4 +80,3 @@ C:\Users\Yovanny\Documents\GitHub\ProyectoFinal\SistemaVentas\SistemaVentas\Sist
 C:\Users\Yovanny\Documents\GitHub\ProyectoFinal\SistemaVentas\SistemaVentas\SistemaVentas\bin\es\System.Web.Mvc.resources.dll
 C:\Users\Yovanny\Documents\GitHub\ProyectoFinal\SistemaVentas\SistemaVentas\SistemaVentas\obj\Debug\SistemaVentas.dll
 C:\Users\Yovanny\Documents\GitHub\ProyectoFinal\SistemaVentas\SistemaVentas\SistemaVentas\obj\Debug\SistemaVentas.pdb
-C:\Users\Yovanny\Documents\GitHub\ProyectoFinal\SistemaVentas\SistemaVentas\SistemaVentas\obj\Debug\SistemaVentas.csprojResolveAssemblyReference.cache

@@ -1,15 +1,13 @@
-﻿@model SistemaVentas.Models.Empleado
+﻿@model SistemaVentas.Models.Cliente
 
 @{
     ViewBag.Title = "Eliminar";
 }
 
-<h2>Eliminar Registro</h2>
-<hr />
-<h3>¿Estas seguro que deseas eliminar?</h3>
+<h3>Estas seguro que deseas Eliminar?</h3>
 <hr />
 <div>
-    <h4>Empleado</h4>
+    <h4>Cliente</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -21,11 +19,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Apellido)
+            @Html.DisplayNameFor(model => model.RUC)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Apellido)
+            @Html.DisplayFor(model => model.RUC)
         </dd>
 
         <dt>
@@ -53,22 +51,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Usuario)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Usuario)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Clave)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Clave)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Observacion)
         </dt>
 
@@ -76,22 +58,15 @@
             @Html.DisplayFor(model => model.Observacion)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TipoUsuario.Descripcion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TipoUsuario.Descripcion)
-        </dd>
-
     </dl>
     <hr />
+
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
-        @Html.HiddenFor(model => model.IdEmpleado)
+     
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Regresar", "Index")
+            @Html.ActionLink("Regresar", "Index", new {@class="btn btn-danger" })
         </div>
     }
 </div>

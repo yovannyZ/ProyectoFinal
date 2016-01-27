@@ -1,18 +1,17 @@
-﻿@model SistemaVentas.Models.Empleado
+﻿@model SistemaVentas.Models.Cliente
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Crear";
 }
 
-<h2>Nuevo empleado</h2>
-<hr />
+
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Empleado</h4>
+        <h4>Nuevo Cliente</h4>
         <hr />
         @Html.ValidationSummary(true)
 
@@ -25,10 +24,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Apellido, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.RUC, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Apellido)
-                @Html.ValidationMessageFor(model => model.Apellido)
+                @Html.EditorFor(model => model.RUC)
+                @Html.ValidationMessageFor(model => model.RUC)
             </div>
         </div>
 
@@ -57,34 +56,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Usuario, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Usuario)
-                @Html.ValidationMessageFor(model => model.Usuario)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Clave, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Clave)
-                @Html.ValidationMessageFor(model => model.Clave)
-            </div>
-        </div>
-
-        <div class="form-group">
             @Html.LabelFor(model => model.Observacion, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Observacion)
                 @Html.ValidationMessageFor(model => model.Observacion)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.IdTipoUsuario, "IdTipoUsuario", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("IdTipoUsuario", String.Empty)
-                @Html.ValidationMessageFor(model => model.IdTipoUsuario)
             </div>
         </div>
 
@@ -95,7 +70,7 @@
         </div>
     </div>
 }
-<hr />
+
 <div>
     @Html.ActionLink("Regresar", "Index")
 </div>

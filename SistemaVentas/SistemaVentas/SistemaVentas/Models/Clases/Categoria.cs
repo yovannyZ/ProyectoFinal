@@ -9,7 +9,7 @@ namespace SistemaVentas.Models
   [MetadataType(typeof(userMetadad))]
     public partial class Categoria
     {
-      public int hola { get; set; }
+      
     }
 
     public class userMetadad

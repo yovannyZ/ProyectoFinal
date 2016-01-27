@@ -1,13 +1,13 @@
-﻿@model IEnumerable<SistemaVentas.Models.Empleado>
+﻿@model IEnumerable<SistemaVentas.Models.Cliente>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Cliente";
 }
 
-<h2>Gestion de Empleados</h2>
-<br />
+<h2>Gestion de Clientes</h2>
+<hr />
 <p>
-    @Html.ActionLink("Nuevo Empleado", "Create")
+    @Html.ActionLink("Nuevo Cliente", "Create")
 </p>
 <table class="table">
     <tr>
@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.Nombre)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Apellido)
+            @Html.DisplayNameFor(model => model.RUC)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DNI)
@@ -27,16 +27,7 @@
             @Html.DisplayNameFor(model => model.Telefono)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Usuario)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Clave)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Observacion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TipoUsuario.Descripcion)
         </th>
         <th></th>
     </tr>
@@ -47,7 +38,7 @@
             @Html.DisplayFor(modelItem => item.Nombre)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Apellido)
+            @Html.DisplayFor(modelItem => item.RUC)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DNI)
@@ -59,21 +50,12 @@
             @Html.DisplayFor(modelItem => item.Telefono)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Usuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Clave)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Observacion)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TipoUsuario.Descripcion)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { Id=item.IdEmpleado }) |
-            @Html.ActionLink("Ver Detalle", "Details", new { Id=item.IdEmpleado }) |
-            @Html.ActionLink("Eliminar", "Delete", new { Id=item.IdEmpleado })
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdCliente }) |
+            @Html.ActionLink("Ver Detalle", "Details", new { id=item.IdCliente }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.IdCliente })
         </td>
     </tr>
 }

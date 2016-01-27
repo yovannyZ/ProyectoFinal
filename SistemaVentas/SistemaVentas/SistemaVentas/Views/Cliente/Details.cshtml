@@ -1,13 +1,13 @@
-﻿@model SistemaVentas.Models.Empleado
+﻿@model SistemaVentas.Models.Cliente
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Detalle</h2>
+<h2>Detalle de Cliente</h2>
 <hr />
 <div>
-    <h4>Empleado</h4>
+    <h4>Cliente</h4>
 	<hr />
     <dl class="dl-horizontal">
         <dt>
@@ -19,11 +19,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Apellido)
+            @Html.DisplayNameFor(model => model.RUC)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Apellido)
+            @Html.DisplayFor(model => model.RUC)
         </dd>
 
         <dt>
@@ -51,22 +51,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Usuario)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Usuario)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Clave)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Clave)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Observacion)
         </dt>
 
@@ -74,18 +58,10 @@
             @Html.DisplayFor(model => model.Observacion)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TipoUsuario.Descripcion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TipoUsuario.Descripcion)
-        </dd>
-
     </dl>
 </div>
 <hr />
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IdEmpleado }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IdCliente }, new { @class = "btn btn-danger" }) 
+    @Html.ActionLink("Regresar", "Index", new { @class = "btn btn-danger" })
 </p>
